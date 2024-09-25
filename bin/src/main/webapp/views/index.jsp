@@ -8,6 +8,5 @@
 </head>
 <body>
 <h1>Đây là trang test</h1>
-<h2>zzzzzz</h2>
 </body>
 </html>
