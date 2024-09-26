@@ -17,62 +17,21 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <!-- CSS -->
-<style>
-/* Chiều cao của Main Image bằng 50% chiều cao viewport */
-.main-image {
-	height: 52.6vh; /* 50% chiều cao của viewport */
-	width: 98%;
-	object-fit: cover; /* Giữ tỷ lệ hình ảnh mà không bị bóp méo */
-}
+<link href="../css/product_detail.css" rel="stylesheet">
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- jQuery UI -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<!-- jQuery UI CSS -->
+<link rel="stylesheet"
+	href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-/* Mỗi ảnh nhỏ sẽ có chiều cao 1/3 của Main Image */
-.side-image {
-	height: calc(50vh/ 3); /* Tính toán chiều cao */
-	width: 100%; /* Đặt chiều ngang của ảnh nhỏ */
-	object-fit: cover; /* Đảm bảo ảnh không bị bóp méo */
-}
-
-/* Đặt chiều ngang của cột chứa mỗi ảnh nhỏ */
-.col-6 {
-	width: 100%;
-	/* Chiều ngang của ảnh nhỏ là 1/2 chiều ngang của ảnh chính */
-}
-
-.col-md-4 {
-	height: 50vh; /* Đặt chiều cao của cột chứa ảnh nhỏ */
-	padding: 0; /* Loại bỏ khoảng đệm giữa cột chứa ảnh nhỏ và ảnh chính */
-}
-
-.row.no-gutters {
-	margin: 0; /* Loại bỏ khoảng cách giữa các hàng */
-}
-
-/* Đảm bảo không có padding trong cột */
-.p-0 {
-	padding: 0 !important; /* Loại bỏ padding nếu có */
-}
-
-.mx-auto {
-	margin-left: 0;
-	margin-right: 0;
-	/* Đảm bảo ảnh được căn đều không có khoảng cách thừa */
-}
-
-/* Đảm bảo chiều cao ảnh nhỏ không vượt quá cột cha */
-.flex-grow-1 {
-	flex-grow: 1; /* Cho phép ảnh nhỏ sử dụng không gian còn lại */
-}
-/* Giảm khoảng cách của tiêu đề */
-.col-lg-8.ps-3 {
-	margin-top: -30px; /* Giảm giá trị margin-top xuống mức mong muốn */
-}
-</style>
 </head>
 <body>
 	<jsp:include page="/common/header.jsp" />
 
 	<div class="row">
-		<div class="col-8 mx-auto my-4">
+		<div class="col-10 mx-auto my-4">
 			<div class="container">
 				<div class="row no-gutters">
 					<!-- Main Image -->
@@ -106,9 +65,9 @@
 			</div>
 		</div>
 	</div>
-	<
+
 	<div class="row mt-0">
-		<div class="col-8 mx-auto my-4">
+		<div class="col-10 mx-auto my-4">
 			<div class="container">
 				<div class="row">
 					<!-- Thêm div.row để tạo một hàng mới -->
@@ -249,6 +208,111 @@
 									style="font-size: 14px;">Túi khí an toàn</span>
 							</div>
 						</div>
+						<hr>
+						<h5>Giấy tờ thuê xe</h5>
+						<div class="document-section p-3 mb-3">
+							<p class="instruction">Chọn 1 trong 2 hình thức:</p>
+							<ul class="list-unstyled highlight-list">
+								<li><i class="bi bi-person-vcard" style="color: black;"></i><strong>GPLX
+										(đối chiếu)</strong> & CCCD (đối chiếu VNeID)</li>
+								<li><i class="bi bi-card-checklist" style="color: black"></i><strong>GPLX
+										(đối chiếu)</strong> & Passport (giữ lại)</li>
+							</ul>
+						</div>
+						<h5>Tài sản thế chấp</h5>
+						<div class="document-section p-3 pb-1 mb-3">
+							<p>Không yêu cầu khách thuê thế chấp Tiền mặt hoặc Xe máy</p>
+						</div>
+						<h5>Điều khoản</h5>
+						<pre style="font: normal;">
+◦ Sử dụng xe đúng mục đích.
+◦ Không sử dụng xe thuê vào mục đích phi pháp, trái pháp luật.
+◦ Không sử dụng xe thuê để cầm cố, thế chấp.
+◦ Không hút thuốc, nhả kẹo cao su, xả rác trong xe.
+◦ Không chở hàng quốc cấm dễ cháy nổ.
+◦ Không chở hoa quả, thực phẩm nặng mùi trong xe.
+◦ Khi trả xe, nếu xe bẩn hoặc có mùi trong xe, khách hàng vui lòng vệ sinh xe sạch sẽ hoặc 
+  gửi phụ thu phí vệ sinh xe.
+Trân trọng cảm ơn, chúc quý khách hàng có những chuyến đi tuyệt vời !</pre>
+						<h5>Chính sách huỷ chuyến</h5>
+						<div class="table-responsive">
+							<table class="table table-bordered text-center">
+								<thead>
+									<tr>
+										<th scope="col">Thời Điểm Hủy Chuyến</th>
+										<th scope="col">Khách Thuê Hủy Chuyến</th>
+										<th scope="col">Chủ Xe Hủy Chuyến</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Trong Vòng 1h Sau Giữ Chỗ</td>
+										<td><i class="bi bi-check-circle-fill text-success"></i>
+											Hoàn tiền giữ chỗ 100%</td>
+										<td><i class="bi bi-check-circle-fill text-success"></i>
+											Không tốn phí <br> <small>(Đánh giá hệ thống 3*)</small></td>
+									</tr>
+									<tr>
+										<td>Trước Chuyến Đi > 7 Ngày</td>
+										<td><i class="bi bi-check-circle-fill text-success"></i>
+											Hoàn tiền giữ chỗ 70%</td>
+										<td><i class="bi bi-check-circle-fill text-success"></i>
+											Đền tiền 30% <br> <small>(Đánh giá hệ thống 3*)</small></td>
+									</tr>
+									<tr>
+										<td>Trong Vòng 7 Ngày Trước Chuyến Đi</td>
+										<td><i class="bi bi-x-circle-fill text-danger"></i> Không
+											hoàn tiền</td>
+										<td><i class="bi bi-x-circle-fill text-danger"></i> Đền
+											tiền 100% <br> <small>(Đánh giá hệ thống 2*)</small></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<hr>
+						<h5>Chủ xe</h5>
+						<div class="owner-info row">
+							<div class="col-auto owner-image">
+								<img src="../photo/owner.jpg" alt="Owner Image"
+									class="owner-img rounded-circle">
+							</div>
+							<div class="col owner-details">
+								<h3 class="owner-name">LÂM THỊ THÚY KIỀU</h3>
+								<p class="rating">
+									<strong>5.0</strong> ⭐ | 8 chuyến
+								</p>
+								<div class="response-stats">
+									<div class="stat-item">
+										<p class="response-info">Tỉ lệ phản hồi</p>
+										<p class="stat-value">
+											<strong>100%</strong>
+										</p>
+									</div>
+									<div class="stat-item">
+										<p class="response-info">Thời gian phản hồi</p>
+										<p class="stat-value">
+											<strong>5 phút</strong>
+										</p>
+									</div>
+									<div class="stat-item">
+										<strong><p class="agreement-info">Tỉ lệ đồng ý</p></strong>
+										<p class="stat-value">
+											<strong>87%</strong>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="highlight">
+							<p class="highlight-text">Chủ xe 5* có thời gian phản hồi
+								nhanh chóng, tỉ lệ đồng ý cao, mức giá cạnh tranh & dịch vụ nhận
+								được nhiều đánh giá tốt từ khách hàng.</p>
+						</div>
+
+
+
+
+
 					</div>
 					<div class="col-lg-4" style="margin-top: -50px; margin-left: -20px">
 						<div class="border rounded p-3"
@@ -258,19 +322,98 @@
 									style="font-size: 24px; margin-right: 8px; line-height: 1; color: green;"></i>
 								<h4 style="color: green; font-size: 14px;">Bảo hiểm thuê xe</h4>
 							</div>
-							<p style="margin-bottom: 10px; font-size: 12px; padding-left: 32px;">Chuyến đi có
-								mua bảo hiểm. Khách thuê bồi thường tối đa 2.000.000 VNĐ trong
-								trường hợp có cự cố ý muốn.</p>
-							<h5 style="color: black; margin-bottom: 0; font-size: 12px; padding-left: 32px;">Xem
+							<p
+								style="margin-bottom: 10px; font-size: 12px; padding-left: 32px;">Chuyến
+								đi có mua bảo hiểm. Khách thuê bồi thường tối đa 2.000.000 VNĐ
+								trong trường hợp có cự cố ý muốn.</p>
+							<h5
+								style="color: black; margin-bottom: 0; font-size: 12px; padding-left: 32px;">Xem
 								chi tiết</h5>
 						</div>
-						
-						
+						<div class="rent-box card p-4 mb-3">
+							<div class="d-flex align-items-center mb-2">
+								<span class="price-original text-muted fs-5 me-2">505K</span> <span
+									class="price-discount bg-warning text-dark rounded p-1 fs-8"
+									style="font-size: 0.75rem;">-23%</span>
+							</div>
+							<h3 class="price-daily text-dark">
+								405K <span class="text-muted" style="font-size: 0.875rem;">/ngày</span>
+							</h3>
+
+							<!-- Box cho Nhận xe và Trả xe -->
+							<div class="row mt-4">
+								<div class="col text-center border p-3 cursor-pointer"
+									id="pickup-box">
+									<div class="fw-bold">Nhận xe</div>
+									<div class="pickup-date-time text-muted"
+										style="font-size: 0.875rem;">26/09/2024 21:00</div>
+									<input type="text" id="pickup-date" class="form-control d-none">
+									<!-- Input ẩn cho Nhận xe -->
+								</div>
+								<div class="col text-center border p-3 cursor-pointer"
+									id="return-box">
+									<div class="fw-bold">Trả xe</div>
+									<div class="return-date-time text-muted"
+										style="font-size: 0.875rem;">27/09/2024 20:00</div>
+									<input type="text" id="return-date" class="form-control d-none">
+									<!-- Input ẩn cho Trả xe -->
+								</div>
+							</div>
+							<div class="mt-3 p-2 bg-light rounded">
+								<p class="text-muted mb-1" style="font-size: 0.75rem;">Địa
+									điểm giao xe</p>
+								<h6 class="fw-bold" style="font-size: 0.875rem;">Quận Bình
+									Thạnh, TP Hồ Chí Minh</h6>
+							</div>
+							<hr>
+							<div class="mt-2">
+								<div class="d-flex justify-content-between">
+									<i class="bi bi-question-circle">Đơn giá thuê</i> <span
+										class="fw-bold">405K</span>
+									<!-- Thay giá thuê ở đây -->
+								</div>
+								<div class="d-flex justify-content-between">
+									<i class="bi bi-question-circle">Bảo hiểm thuê xe</i> <span
+										class="fw-bold">100K</span>
+									<!-- Thay giá bảo hiểm ở đây -->
+								</div>
+							</div>
+							<hr>
+							<div class="form-group mt-3">
+
+								<!-- Radio button Chương trình giảm giá -->
+								<div class="form-check">
+									<input class="form-check-input" type="radio"
+										name="discountOption" id="programDiscount" value="program">
+									<label class="form-check-label" for="programDiscount">
+										Chương trình giảm giá </label>
+								</div>
+
+								<!-- Radio button Mã giảm giá -->
+								<div class="form-check">
+									<input class="form-check-input" type="radio"
+										name="discountOption" id="codeDiscount" value="code">
+									<label class="form-check-label" for="codeDiscount"> Mã
+										giảm giá </label>
+								</div>
+							</div>
+							<hr>
+							<div class="mt-2">
+								<div class="d-flex justify-content-between">
+									Tổng cộng <span class="fw-bold">505K</span>
+									<!-- Thay giá thuê ở đây -->
+								</div>
+							</div>
+							<div class="text-center mt-3">
+								<button type="button" class="btn btn-success btn-lg px-5">Thuê</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<jsp:include page="/common/footer.jsp" />
 
 
 	<script
