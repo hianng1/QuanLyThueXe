@@ -105,6 +105,75 @@
         <div>
             <p class="text-center fw-bold fs-1">Xe Dành Cho Bạn</p> <!-- Giảm margin-bottom -->
         </div>
+        <hr>
+        <div class="row text-center">
+            <p class="text-center fw-bold fs-1 mb-1">Ưu Điểm Của Mioto</p> 
+            <p class="text-center fs-5 mt-1">Những tính năng giúp bạn dễ dàng hơn khi thuê xe trên Mioto.</p> 
+            <div class="col-md-4">
+                <img src="https://www.mioto.vn/static/media/thue_xe_co_tai_xe.a6f7dc54.svg" alt="Image1" class="img-fluid">
+                <p class="fs-5 fw-semibold mb-1">Lái xe an toàn cùng Mioto</p>
+                <p class="mt-1">Chuyến đi trên Mioto được bảo vệ với Gói bảo hiểm thuê xe tự lái từ MIC & VNI.
+                    Khách thuê sẽ chỉ bồi thường tối đa 2,000,000VNĐ trong trường hợp có sự cố ngoài ý muốn.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://www.mioto.vn/static/media/dich_vu_thue_xe_tu_lai_hanoi.f177339e.svg" alt="Image2" class="img-fluid">
+                <p class="fs-5 fw-semibold mb-1">An tâm đặt xe</p>
+                <p class="mt-1">Không tính phí huỷ chuyến trong vòng 1h sau khi đặt cọc. Hoàn cọc và bồi thường 100% nếu chủ xe huỷ chuyến trong vòng 7 ngày trước chuyến đi.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://www.mioto.vn/static/media/cho_thue_xe_tu_lai_tphcm.1e7cb1c7.svg" alt="Image3" class="img-fluid">
+                <p class="fs-5 fw-semibold mb-1">Thủ tục đơn giản</p>
+                <p class="mt-1">Chỉ cần có CCCD gắn chip (Hoặc Passport) & Giấy phép lái xe là bạn đã đủ điều kiện thuê xe trên Mioto.</p>
+            </div>
+        </div>
+        <br>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img src="https://www.mioto.vn/static/media/cho_thue_xe_tu_lai_hanoi.735438af.svg" alt="Image1" class="img-fluid">
+                <p class="fs-5 fw-semibold mb-1">Thanh toán dễ dàng</p>
+                <p class="mt-1">Đa dạng hình thức thanh toán: ATM, thẻ Visa & Ví điện tử (Momo, VnPay, ZaloPay).</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://www.mioto.vn/static/media/thue_xe_tu_lai_gia_re_hcm.ffd1319e.svg" alt="Image2" class="img-fluid">
+                <p class="fs-5 fw-semibold mb-1">Giao xe tận nơi</p>
+                <p class="mt-1">Bạn có thể lựa chọn giao xe tận nhà/sân bay... Phí tiết kiệm chỉ từ 15k/km.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://www.mioto.vn/static/media/thue_xe_tu_lai_gia_re_hanoi.4035317e.svg" alt="Image3" class="img-fluid">
+                <p class="fs-5 fw-semibold mb-1">Dòng xe đa dạng</p>
+                <p class="mt-1">Hơn 100 dòng xe cho bạn tuỳ ý lựa chọn: Mini, Sedan, CUV, SUV, MPV, Bán tải.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row text-center">
+            <p class="text-center fw-bold fs-1 mb-1">Hướng Dẫn Thuê Xe</p> 
+            <p class="text-center fs-5 mt-1">Chỉ với 4 bước đơn giản để trải nghiệm thuê xe Mioto một cách nhanh chóng</p> 
+            <div class="col-md-3">
+                <img src="https://www.mioto.vn/static/media/cho_thue_xe_co_taigia_re_tphcm.12455eba.svg" alt="Image1" class="img-fluid">
+                <p class="fs-4 fw-bold">Bước 1:
+                    Đặt xe trên
+                    web Mioto</p>
+            </div>
+            <div class="col-md-3">
+                <img src="https://www.mioto.vn/static/media/gia_thue_xe_7cho_tai_tphcm.9455973a.svg" alt="Image2" class="img-fluid">
+                <p class="fs-4 fw-bold mt-3">Bước 2:
+                    Nhận xe</p>
+            </div>
+            <div class="col-md-3">
+                <img src="https://www.mioto.vn/static/media/gia_thue_xe_7cho_tai_hanoi.0834bed8.svg" alt="Image3" class="img-fluid">
+                <p class="fs-4 fw-bold mt-3">Bước 3:
+                    Bắt đầu
+                    hành trình</p>
+                
+            </div>
+            <div class="col-md-3">
+                <img src="https://www.mioto.vn/static/media/gia_thue_xe_4cho_tai_tphcm.9dcd3930.svg" alt="Image3" class="img-fluid">
+                <p class="fs-4 fw-bold mt-3">Bước 4:
+                    Trả xe & kết thúc
+                    chuyến đi</p>
+            </div>
+        </div>
+        <hr>
     </div>
     
 
