@@ -4,22 +4,12 @@
 <%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt"%>
 
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Index</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>
-	<jsp:include page="/common/header.jsp" />
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-=======
-<html lang="en">
-    <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,56 +36,11 @@
         </style>
     </head>
 <body>
+<jsp:include page="/common/header.jsp" />
     <div class="container">
-        <div class="row">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <div class="col-sm-2">
-                        <a class="navbar-brand" href="#!">
-                            <img src="https://www.mioto.vn/static/media/logo-full.ea382559.png" alt="Logo"
-                                class="img-fluid w-70">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
-                    <div class="col-sm-10">
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav ms-auto mb-1 d-flex justify-content-between">
-                                <li class="nav-item">
-                                    <a class="nav-link active fw-semibold" aria-current="page" href="#">Trang chủ</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Các loại xe
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Xe 6 chỗ</a></li>
-                                        <li><a class="dropdown-item" href="#">Xe 8 chỗ</a></li>
-                                        <li><a class="dropdown-item" href="#">Xe điện</a></li>
-                                        <li><a class="dropdown-item" href="#">Xe ga</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active fw-semibold" aria-current="page" href="#">Trở thành chủ xe</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active fw-semibold" aria-current="page" href="#">Đăng ký</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active fw-semibold" aria-current="page" href="#">Đăng nhập</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
         <div class="hero-image d-flex align-items-center justify-content-center">
             <div class="text-center text-light">
-                <h1 class="fw-bold">${name}</h1>
+                <h1 class="fw-bold">Mioto - Cùng Bạn Đến Mọi Hành Trình</h1>
                 <p class="fw-semibold">Trải nghiệm sự khác biệt từ hơn <strong>8000</strong> xe gia đình đời mới khắp Việt Nam</p>
             </div>
         </div>
@@ -119,9 +64,119 @@
             </div>
         </div>
         <hr>
-        <div>
-            <p class="text-center fw-bold fs-1">Xe Dành Cho Bạn</p> <!-- Giảm margin-bottom -->
-        </div>
+        <div class="container my-4">
+            <p class="text-center fw-bold fs-1">Xe Dành Cho Bạn</p>
+            <div class="row mb-4">
+        
+              <!-- Card 1 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/toyota_innova_2016/p/g/2024/06/26/11/Q7SfQiVa25ZlKCbJbH91TA.jpg" class="card-img-top" alt="Toyota Innova 2016">
+                  <div class="card-body">
+                    <span class="badge bg-warning text-dark">Số sàn</span>
+                    <h5 class="card-title mt-2">TOYOTA INNOVA 2016</h5>
+                    <p><i class="fa fa-map-marker"></i> Quận Bình Thạnh, TP. Hồ Chí Minh</p>
+                    <p class="card-text">
+                      <span class="text-warning"><i class="fa fa-star"></i> 5.0</span>
+                      <span><i class="fa fa-suitcase"></i> 1 chuyến</span>
+                    </p>
+                    <p><span class="text-muted"><del>858K</del></span> <strong class="text-success">738K</strong> / ngày</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Card 2 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/hyundai_accent_2019/p/g/2023/11/20/19/c3Co5gSAo0aOcdjT45EGwQ.jpg" class="card-img-top" alt="Hyundai Accent 2019">
+                  <div class="card-body">
+                    <span class="badge bg-warning text-dark">Số sàn</span>
+                    <span class="badge bg-success text-white">Giao xe tận nơi</span>
+                    <h5 class="card-title mt-2">HYUNDAI ACCENT 2019</h5>
+                    <p><i class="fa fa-map-marker"></i> Quận Bình Thạnh, TP. Hồ Chí Minh</p>
+                    <p class="card-text">
+                      <span class="text-warning"><i class="fa fa-star"></i> 5.0</span>
+                      <span><i class="fa fa-suitcase"></i> 19 chuyến</span>
+                    </p>
+                    <p><strong class="text-success">712K</strong> / ngày</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Card 3 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/toyota_innova_2018/p/g/2024/06/03/09/FKHYR1sbpBWJkQq6x5M2MQ.jpg" class="card-img-top" alt="Toyota Fortuner Legender 2012">
+                  <div class="card-body">
+                    <span class="badge bg-info text-dark">Số tự động</span>
+                    <h5 class="card-title mt-2">TOYOTA FORTUNER 2012</h5>
+                    <p><i class="fa fa-map-marker"></i> Quận Bình Thạnh, TP. Hồ Chí Minh</p>
+                    <p class="card-text">
+                      <span class="text-warning"><i class="fa fa-star"></i> 5.0</span>
+                      <span><i class="fa fa-suitcase"></i> 1 chuyến</span>
+                    </p>
+                    <p><span class="text-muted"><del>976K</del></span> <strong class="text-success">856K</strong> / ngày</p>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+            <div class="row mb-4">
+        
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/suzuki_xl7_2022/p/g/2024/04/01/22/z-rvn1aOCFBeXHXakR1r7w.jpg" class="card-img-top" alt="Toyota Innova 2016">
+                    <div class="card-body">
+                      <span class="badge bg-warning text-dark">Số sàn</span>
+                      <h5 class="card-title mt-2">TOYOTA INNOVA 2016</h5>
+                      <p><i class="fa fa-map-marker"></i> Quận Bình Thạnh, TP. Hồ Chí Minh</p>
+                      <p class="card-text">
+                        <span class="text-warning"><i class="fa fa-star"></i> 5.0</span>
+                        <span><i class="fa fa-suitcase"></i> 1 chuyến</span>
+                      </p>
+                      <p><span class="text-muted"><del>858K</del></span> <strong class="text-success">738K</strong> / ngày</p>
+                    </div>
+                  </div>
+                </div>
+          
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/toyota_innova_2018/p/g/2024/06/03/09/FKHYR1sbpBWJkQq6x5M2MQ.jpg" class="card-img-top" alt="Hyundai Accent 2019">
+                    <div class="card-body">
+                      <span class="badge bg-warning text-dark">Số sàn</span>
+                      <span class="badge bg-success text-white">Giao xe tận nơi</span>
+                      <h5 class="card-title mt-2">HYUNDAI ACCENT 2019</h5>
+                      <p><i class="fa fa-map-marker"></i> Quận Bình Thạnh, TP. Hồ Chí Minh</p>
+                      <p class="card-text">
+                        <span class="text-warning"><i class="fa fa-star"></i> 5.0</span>
+                        <span><i class="fa fa-suitcase"></i> 19 chuyến</span>
+                      </p>
+                      <p><strong class="text-success">712K</strong> / ngày</p>
+                    </div>
+                  </div>
+                </div>
+          
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/suzuki_ciaz_2021/p/g/2024/04/02/15/kwaHxl_pXMY1lbgYCkOCBg.jpg" class="card-img-top" alt="Toyota Fortuner Legender 2012">
+                    <div class="card-body">
+                      <span class="badge bg-info text-dark">Số tự động</span>
+                      <h5 class="card-title mt-2">TOYOTA FORTUNER 2012</h5>
+                      <p><i class="fa fa-map-marker"></i> Quận Bình Thạnh, TP. Hồ Chí Minh</p>
+                      <p class="card-text">
+                        <span class="text-warning"><i class="fa fa-star"></i> 5.0</span>
+                        <span><i class="fa fa-suitcase"></i> 1 chuyến</span>
+                      </p>
+                      <p><span class="text-muted"><del>976K</del></span> <strong class="text-success">856K</strong> / ngày</p>
+                    </div>
+                  </div>
+                </div>
+          
+              </div>
+          </div>
         <hr>
         <div class="row text-center">
             <p class="text-center fw-bold fs-1 mb-1">Ưu Điểm Của Mioto</p> 

@@ -1,63 +1,62 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt"%>
-<style>
-/* Custom styling for the navbar */
-/* Custom styling for the navbar */
-.custom-navbar {
-    height: 80px;
-    background-color: #ffffff; /* Đổi màu nền thành trắng */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.brand-logo {
-    height: 50px;
-    width: auto;
-}
-
-/* Giảm kích thước font chữ và tăng khoảng cách giữa các mục */
-.navbar-nav .nav-link {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #333;
-    padding: 10px 25px;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #007bff;
-    transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:focus {
-    box-shadow: none;
-    outline: none;
-}
-
-</style>
-
-<div class="col-10 mx-auto">
-        <nav class="navbar navbar-expand-lg custom-navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"> 
-                    <img src="logo.png" class="brand-logo" alt="Brand Logo">
-                </a>
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end"
-                    id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="#">Về Mioto</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Trở thành chủ xe</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Đăng ký</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Đăng nhập</a></li>
-                    </ul>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web</title>
+    <!-- Add your CSS links here -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <div class="col-sm-2">
+                        <a class="navbar-brand" href="#!">
+                            <img src="https://www.mioto.vn/static/media/logo-full.ea382559.png" alt="Logo"
+                                class="img-fluid w-70">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto mb-1 d-flex justify-content-between">
+                                <li class="nav-item">
+                                    <a class="nav-link active fw-semibold" aria-current="page" href="#">Trang chủ</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Các loại xe
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Xe 6 chỗ</a></li>
+                                        <li><a class="dropdown-item" href="#">Xe 8 chỗ</a></li>
+                                        <li><a class="dropdown-item" href="#">Xe điện</a></li>
+                                        <li><a class="dropdown-item" href="#">Xe ga</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active fw-semibold" aria-current="page" href="#">Trở thành chủ xe</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active fw-semibold" aria-current="page" href="#">Đăng ký</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active fw-semibold" aria-current="page" href="#">Đăng nhập</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </div>
-
+</body>
+</html>

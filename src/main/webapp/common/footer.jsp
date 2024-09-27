@@ -2,98 +2,101 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt"%>
-<style>
-footer {
-    background-color: #f8f9fa; /* Light background color */
-}
-
-footer h5 {
-    margin-bottom: 15px; /* Space below headings */
-    color: #343a40; /* Dark color for headings */
-}
-
-footer a {
-    color: #000; /* Set link color to black */
-    text-decoration: none; /* Remove underline */
-    text-align: left; /* Left align links */
-}
-
-footer a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-footer p {
-    margin-bottom: 10px; /* Space below paragraphs */
-}
-
-.mb-4 {
-    margin-bottom: 1.5rem; /* Bottom margin for spacing */
-}
-
-.text-left {
-    text-align: left; /* Force left alignment */
-}
-
-footer p, footer ul li {
-    line-height: 4; /* Điều chỉnh khoảng cách giữa các dòng */
-}
-
-
-</style>
-<footer class="bg-light text-dark mt-5 pt-5 pb-4">
-	<div class="container">
-		<div class="row text-left" style="margin-left: 80px">
-			<!-- Column 1: Logo, Phone, Email -->
-			<div class="col-md-3 ps-0 footer-column" style="margin-right: 0px">
-				<img src="logo-url.jpg" alt="Logo" class="img-fluid mb-3"
-					style="max-width: 100px;">
-				<p>
-					<strong>Điện thoại:</strong> 0123-456-789
-				</p>
-				<p>
-					<strong>Email:</strong> contact@example.com
-				</p>
-			</div>
-
-			<!-- Column 2: Chính sách -->
-			<div class="col-md-2 mb-4">
-				<h5 class="font-weight-bold">Chính sách</h5>
-				<ul class="list-unstyled">
-					<li><a href="#">Chính sách bảo mật</a></li>
-					<li><a href="#">Điều khoản dịch vụ</a></li>
-					<li><a href="#">Chính sách hoàn trả</a></li>
-				</ul>
-			</div>
-
-			<!-- Column 3: Tìm hiểu thêm -->
-			<div class="col-md-2 mb-4">
-				<h5 class="font-weight-bold">Tìm hiểu thêm</h5>
-				<ul class="list-unstyled">
-					<li><a href="#">Hướng dẫn sử dụng</a></li>
-					<li><a href="#">Câu hỏi thường gặp</a></li>
-					<li><a href="#">Tin tức</a></li>
-				</ul>
-			</div>
-
-			<!-- Column 4: About -->
-			<div class="col-md-2 mb-4">
-				<h5 class="font-weight-bold">About</h5>
-				<ul class="list-unstyled">
-					<li><a href="#">Giới thiệu</a></li>
-					<li><a href="#">Đội ngũ</a></li>
-					<li><a href="#">Liên hệ</a></li>
-				</ul>
-			</div>
-
-			<!-- Column 5: Đối tác -->
-			<div class="col-md-3 mb-4">
-				<h5 class="font-weight-bold">Đối tác</h5>
-				<ul class="list-unstyled">
-					<li><a href="#">Đối tác 1</a></li>
-					<li><a href="#">Đối tác 2</a></li>
-					<li><a href="#">Đối tác 3</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+<footer>
+    <div class="container">
+        <div class="row text-dark fw-semibold">
+            <div class="col-sm-3 text-center">
+                <img src="https://www.mioto.vn/static/media/logo-full.ea382559.png"
+                    class="img-fluid mx-1 my-1" alt="">
+                <p>Mioto nỗ lực từng ngày để đem đến những sản phẩm mới mẻ và chất lượng dịch vụ hoàn hảo
+                    tới khách hàng.</p>
+            </div>
+            <div class="col-sm-9">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h4 class="mt-4 text-dark"><b>HOẠT ĐỘNG</b></h4>
+                        <hr>
+                        <ul class="no-bullets ms-0">
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href="gioi_thieu.html"><i class="fa-solid fa-angle-right"></i> Về Mioto</a></li>
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-angle-right"></i> Tuyển dụng</a></li>
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-angle-right"></i> Hồ sơ năng lực</a></li>
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-angle-right"></i> Thuê xe du lịch</a></li>
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-angle-right"></i> Blog du lịch</a></li>
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-angle-right"></i> Dịch vụ visa</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4 class="mt-4 text-dark"><b>THÔNG TIN HỮU ÍCH</b></h4>
+                        <hr>
+                        <ul class="no-bullets ms-0">
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-angle-right"></i> Hướng dẫn thanh toán</a></li>
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-angle-right"></i> Chính sách hoãn hủy tour</a>
+                            </li>
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-angle-right"></i> Điều khoản sử dụng</a></li>
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-angle-right"></i> Chính sách bảo mật</a></li>
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-angle-right"></i> Bản quyền hình ảnh</a></li>
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href="lien_he.html"><i class="fa-solid fa-angle-right"></i> Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4 class="mt-4 text-dark"><b>THÔNG TIN LIÊN HỆ</b></h4>
+                        <hr>
+                        <ul class="no-bullets ms-0">
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-location-dot"></i> Add: Số 2 Ngõ 18, Đường Nguyễn
+                                    Cơ Thạch, Phường Cầu Diễn, Quận Nam Từ Liêm, Hà Nội</a></li>
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-phone"></i> Tel: 024 6686 1789</a></li>
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-phone"></i> Hotline: 082 6151 1515</a></li>
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-envelope"></i> Email: info@Mioto.vn</a></li>
+                            <li class="mb-3"><a
+                                    class="nav-link link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href=""><i class="fa-solid fa-magnifying-glass"></i> Website: Mioto.vn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-dark p-0">
+            <h5 class="text-dark">CÔNG TY TNHH DỊCH VỤ AM VIỆT NAM</h5>
+            <h8 class="text-dark">- Giấy phép kinh doanh số: 0110137416 - Giấy phép Kinh doanh Lữ hành số: 01-0324/2022/SDL-GP LHND -
+                Giấy phép Vận tải số:</h8>
+            <h8 class="text-dark">9488/GPKDVT</h8>
+        </div>
+        <div class="row text-dark text-center">
+            <p class="mt-3 text-dark">Copyright 2020 <i class="fa-regular fa-copyright"></i> Mioto</p>
+        </div>
+    </div>
 </footer>
+
