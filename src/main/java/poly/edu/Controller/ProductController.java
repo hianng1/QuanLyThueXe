@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class ProductController {
-	@GetMapping("/product")
+	@GetMapping("/car")
     public String getProductDetail() {
 
         return "/user/product_detail"; //
