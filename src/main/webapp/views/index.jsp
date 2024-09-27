@@ -70,7 +70,7 @@
         
               <!-- Card 1 -->
               <div class="col-md-4">
-                <div class="card">
+                <div class="card" onclick="window.location.href='/product'">
                   <img src="https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/toyota_innova_2016/p/g/2024/06/26/11/Q7SfQiVa25ZlKCbJbH91TA.jpg" class="card-img-top" alt="Toyota Innova 2016">
                   <div class="card-body">
                     <span class="badge bg-warning text-dark">Số sàn</span>
@@ -87,7 +87,7 @@
         
               <!-- Card 2 -->
               <div class="col-md-4">
-                <div class="card">
+                 <div class="card" onclick="window.location.href='/product'">
                   <img src="https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/hyundai_accent_2019/p/g/2023/11/20/19/c3Co5gSAo0aOcdjT45EGwQ.jpg" class="card-img-top" alt="Hyundai Accent 2019">
                   <div class="card-body">
                     <span class="badge bg-warning text-dark">Số sàn</span>
@@ -105,7 +105,7 @@
         
               <!-- Card 3 -->
               <div class="col-md-4">
-                <div class="card">
+                 <div class="card" onclick="window.location.href='/product'">
                   <img src="https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/toyota_innova_2018/p/g/2024/06/03/09/FKHYR1sbpBWJkQq6x5M2MQ.jpg" class="card-img-top" alt="Toyota Fortuner Legender 2012">
                   <div class="card-body">
                     <span class="badge bg-info text-dark">Số tự động</span>
@@ -125,7 +125,7 @@
         
                 <!-- Card 1 -->
                 <div class="col-md-4">
-                  <div class="card">
+                   <div class="card" onclick="window.location.href='/product'">
                     <img src="https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/suzuki_xl7_2022/p/g/2024/04/01/22/z-rvn1aOCFBeXHXakR1r7w.jpg" class="card-img-top" alt="Toyota Innova 2016">
                     <div class="card-body">
                       <span class="badge bg-warning text-dark">Số sàn</span>
@@ -142,7 +142,7 @@
           
                 <!-- Card 2 -->
                 <div class="col-md-4">
-                  <div class="card">
+                   <div class="card" onclick="window.location.href='/product'">
                     <img src="https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/toyota_innova_2018/p/g/2024/06/03/09/FKHYR1sbpBWJkQq6x5M2MQ.jpg" class="card-img-top" alt="Hyundai Accent 2019">
                     <div class="card-body">
                       <span class="badge bg-warning text-dark">Số sàn</span>
@@ -160,7 +160,7 @@
           
                 <!-- Card 3 -->
                 <div class="col-md-4">
-                  <div class="card">
+                   <div class="card" onclick="window.location.href='/product'">
                     <img src="https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/suzuki_ciaz_2021/p/g/2024/04/02/15/kwaHxl_pXMY1lbgYCkOCBg.jpg" class="card-img-top" alt="Toyota Fortuner Legender 2012">
                     <div class="card-body">
                       <span class="badge bg-info text-dark">Số tự động</span>

@@ -1,4 +1,4 @@
-package poly.edu.controller;
+package poly.edu.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
