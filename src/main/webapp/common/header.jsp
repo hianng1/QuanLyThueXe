@@ -15,7 +15,7 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <div class="col-sm-2">
-                        <a class="navbar-brand" href="#!">
+                        <a class="navbar-brand" href="trangchu">
                             <img src="https://www.mioto.vn/static/media/logo-full.ea382559.png" alt="Logo"
                                 class="img-fluid w-70">
                         </a>
@@ -43,7 +43,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active fw-semibold" aria-current="page" href="#">Trở thành chủ xe</a>
+                                    <a class="nav-link active fw-semibold" aria-current="page" href="dangkyxe">Trở thành chủ xe</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active fw-semibold" aria-current="page" href="#">Đăng ký</a>
