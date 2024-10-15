@@ -18,6 +18,6 @@ public class HomeController {
 	
 	@RequestMapping("/car")
 	public String car(Model model) {
-		return "/user/product_detail";
+		return "/customer/product_detail";
 	}
 }
