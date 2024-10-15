@@ -1,4 +1,4 @@
-
+a
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
@@ -25,7 +25,10 @@
 <!-- jQuery UI CSS -->
 <link rel="stylesheet"
 	href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 </head>
 <body>
 	<jsp:include page="/common/header.jsp" />
@@ -342,29 +345,61 @@ Trân trọng cảm ơn, chúc quý khách hàng có những chuyến đi tuyệ
 
 							<!-- Box cho Nhận xe và Trả xe -->
 							<div class="row mt-4">
-								<div class="col text-center border p-3 cursor-pointer"
-									id="pickup-box">
+								<div class="col-6 text-center border p-3 cursor-pointer">
 									<div class="fw-bold">Nhận xe</div>
-									<div class="pickup-date-time text-muted"
-										style="font-size: 0.875rem;">26/09/2024 21:00</div>
-									<input type="text" id="pickup-date" class="form-control d-none">
-									<!-- Input ẩn cho Nhận xe -->
+									<div class="input-group date" id="pickup-date-picker">
+										<input type="text" class="form-control" id="pickup-date"
+											placeholder="Chọn ngày">
+										<div class="input-group-append">
+											<span class="input-group-text"><i
+												class="bi bi-calendar"></i></span>
+										</div>
+									</div>
+									<select class="form-control mt-2" id="pickup-time">
+										<option value="">Chọn giờ</option>
+										<%
+										for (int i = 0; i < 24; i++) {
+										%>
+										<option value="<%=String.format("%02d:00", i)%>"><%=String.format("%02d:00", i)%></option>
+										<%
+										}
+										%>
+									</select>
 								</div>
-								<div class="col text-center border p-3 cursor-pointer"
-									id="return-box">
+								<div class="col-6 text-center border p-3 cursor-pointer">
 									<div class="fw-bold">Trả xe</div>
-									<div class="return-date-time text-muted"
-										style="font-size: 0.875rem;">27/09/2024 20:00</div>
-									<input type="text" id="return-date" class="form-control d-none">
-									<!-- Input ẩn cho Trả xe -->
+									<div class="input-group date" id="return-date-picker">
+										<input type="text" class="form-control" id="return-date"
+											placeholder="Chọn ngày">
+										<div class="input-group-append">
+											<span class="input-group-text"><i
+												class="bi bi-calendar"></i></span>
+										</div>
+									</div>
+									<select class="form-control mt-2" id="return-time">
+										<option value="">Chọn giờ</option>
+										<%
+										for (int i = 0; i < 24; i++) {
+										%>
+										<option value="<%=String.format("%02d:00", i)%>"><%=String.format("%02d:00", i)%></option>
+										<%
+										}
+										%>
+									</select>
 								</div>
 							</div>
-							<div class="mt-3 p-2 bg-light rounded">
-								<p class="text-muted mb-1" style="font-size: 0.75rem;">Địa
-									điểm giao xe</p>
-								<h6 class="fw-bold" style="font-size: 0.875rem;">Quận Bình
-									Thạnh, TP Hồ Chí Minh</h6>
+							<div class="mt-3">
+								<p id="pickup-display" class="text-muted mb-1"
+									style="font-size: 0.75rem;">Ngày giờ nhận xe: Chưa chọn</p>
+								<p id="return-display" class="text-muted mb-1"
+									style="font-size: 0.75rem;">Ngày giờ trả xe: Chưa chọn</p>
 							</div>
+<!-- 							<div class="mt-3 p-2 bg-light rounded"> -->
+<!-- 								<p class="text-muted mb-1" style="font-size: 0.75rem;">Địa -->
+<!-- 									điểm giao xe</p> -->
+<!-- 								<h6 class="fw-bold" style="font-size: 0.875rem;">Quận Bình -->
+<!-- 									Thạnh, TP Hồ Chí Minh</h6> -->
+<!-- 							</div> -->
 							<hr>
 							<div class="mt-2">
 								<div class="d-flex justify-content-between">
@@ -420,6 +455,32 @@ Trân trọng cảm ơn, chúc quý khách hàng có những chuyến đi tuyệ
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
+<script>
+$(document).ready(function() {
+    $('#pickup-date-picker, #return-date-picker').datepicker({
+        format: 'dd/mm/yyyy',
+        autoclose: true,
+        todayHighlight: true
+    });
 
+    function updateDateTimeDisplay() {
+        var pickupDate = $('#pickup-date').val();
+        var pickupTime = $('#pickup-time').val();
+        var returnDate = $('#return-date').val();
+        var returnTime = $('#return-time').val();
+
+        var pickupDisplay = pickupDate && pickupTime ? pickupDate + ' ' + pickupTime : 'Chưa chọn';
+        var returnDisplay = returnDate && returnTime ? returnDate + ' ' + returnTime : 'Chưa chọn';
+
+        $('#pickup-display').text('Ngày giờ nhận xe: ' + pickupDisplay);
+        $('#return-display').text('Ngày giờ trả xe: ' + returnDisplay);
+    }
+
+    $('#pickup-date, #pickup-time, #return-date, #return-time').change(updateDateTimeDisplay);
+
+    // Initial update
+    updateDateTimeDisplay();
+});
+</script>
 </body>
 </html>

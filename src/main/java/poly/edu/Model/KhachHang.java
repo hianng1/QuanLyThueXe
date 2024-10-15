@@ -2,6 +2,8 @@ package poly.edu.Model;
 
 import java.util.Date;
 
+import jakarta.persistence.*;
+
 public class KhachHang {
 	
     private String khachHangID;
@@ -16,6 +18,10 @@ public class KhachHang {
 	public KhachHang() {
 		
 	}
+	@ManyToOne
+	@JoinColumn(name = "user_id", referencedColumnName = "id")
+	private User user;
+
 
 	public KhachHang(String khachHangID, String hoTen, String email, String soDienThoai, String diaChi,
 			String tenDangNhap, String matKhau, Date ngayDangKy) {

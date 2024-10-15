@@ -2,6 +2,8 @@ package poly.edu.Model;
 
 import java.util.Date;
 
+import jakarta.persistence.*;
+
 public class NguoiChoThue {
 
     private String nguoiChoThueID;
@@ -14,6 +16,10 @@ public class NguoiChoThue {
     private Date ngayDangKy;
     private Double danhGiaNguoiChoThue;
     
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
+
 	public NguoiChoThue() {
 		
 	}
