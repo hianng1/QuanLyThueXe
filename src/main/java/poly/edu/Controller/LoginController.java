@@ -21,7 +21,7 @@ public class LoginController {
 
 	@GetMapping("/login")
 	public String showLoginPage() {
-		return "login";
+		return "/user/login";
 	}
 
 	@PostMapping("/login")
@@ -34,19 +34,20 @@ public class LoginController {
 			session.setAttribute("user", user.get());
 
 			Role role = user.get().getRole();
-			switch (role) {
-			case ADMIN:
-				return "redirect:/admin/dashboard";
-			case OWNER:
-				return "redirect:/owner/dashboard";
-			case CUSTOMER:
-				return "redirect:/customer"; // ĐƯỜNG DẪN ĐẾN TRANG CUSTOMER
-			default:
-				return "redirect:/trangchu"; // TRANG CHỦ CHO NGƯỜI DÙNG KHÁC
-			}
+//			switch (role) {
+//			case ADMIN:
+//				return "redirect:/admin/dashboard";
+//			case OWNER:
+//				return "redirect:/owner/dashboard";
+//			case CUSTOMER:
+//				return "redirect:/customer"; // ĐƯỜNG DẪN ĐẾN TRANG CUSTOMER
+//			default:
+//				return "redirect:/trangchu"; // TRANG CHỦ CHO NGƯỜI DÙNG KHÁC
+//			}
+			return "redirect:/trangchu";
 		}else {
 			model.addAttribute("error","Login failed!");
-			return "login";
+			return "user/login";
 		}
 	}
 	

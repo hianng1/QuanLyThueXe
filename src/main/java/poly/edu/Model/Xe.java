@@ -1,116 +1,117 @@
 package poly.edu.Model;
 
-public class Xe {
-	
+import java.io.Serializable;
+import java.util.List;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "Xe")
+public class Xe implements Serializable {
+    @Id
+    @Column(name = "XeID")
     private String xeID;
-    private String nguoiChoThueID;
-    private String loaiXe;
+
+    @Column(name = "TenXe")
+    private String tenXe;
+
+    @Column(name = "HangXe")
     private String hangXe;
-    private String bienSoXe;
-    private Integer namSanXuat;
+
+    @Column(name = "MauXe")
+    private String mauXe;
+
+    @Column(name = "GiaThue")
     private Double giaThue;
-    private String trangThaiXe;
-    private Integer soKmDaDi;
-    private Integer soGhe;
+
+    @Column(name = "TrangThai")
+    private Boolean trangThai;
+
+    @ManyToOne
+    @JoinColumn(name = "NguoiChoThueID")
+    private NguoiChoThue nguoiChoThue;
     
-	public Xe() {
+    @OneToMany(mappedBy = "xe")
+    private List<DanhGiaXe> danhGiaXes;
 
-	}
+    @OneToMany(mappedBy = "xe")
+    private List<DonThueXe> donThueXes;
 
-	public Xe(String xeID, String nguoiChoThueID, String loaiXe, String hangXe, String bienSoXe, Integer namSanXuat,
-			Double giaThue, String trangThaiXe, Integer soKmDaDi, Integer soGhe) {
-		this.xeID = xeID;
-		this.nguoiChoThueID = nguoiChoThueID;
-		this.loaiXe = loaiXe;
-		this.hangXe = hangXe;
-		this.bienSoXe = bienSoXe;
-		this.namSanXuat = namSanXuat;
-		this.giaThue = giaThue;
-		this.trangThaiXe = trangThaiXe;
-		this.soKmDaDi = soKmDaDi;
-		this.soGhe = soGhe;
-	}
+    // Constructor không tham số
+    public Xe() {}
 
-	public String getXeID() {
-		return xeID;
-	}
+    // Constructor với tham số
+    public Xe(String xeID, String tenXe, String hangXe, String mauXe, Double giaThue, Boolean trangThai) {
+        this.xeID = xeID;
+        this.tenXe = tenXe;
+        this.hangXe = hangXe;
+        this.mauXe = mauXe;
+        this.giaThue = giaThue;
+        this.trangThai = trangThai;
+    }
 
-	public void setXeID(String xeID) {
-		this.xeID = xeID;
-	}
+    // Getters và Setters
+    public String getXeID() {
+        return xeID;
+    }
 
-	public String getNguoiChoThueID() {
-		return nguoiChoThueID;
-	}
+    public void setXeID(String xeID) {
+        this.xeID = xeID;
+    }
 
-	public void setNguoiChoThueID(String nguoiChoThueID) {
-		this.nguoiChoThueID = nguoiChoThueID;
-	}
+    public String getTenXe() {
+        return tenXe;
+    }
 
-	public String getLoaiXe() {
-		return loaiXe;
-	}
+    public void setTenXe(String tenXe) {
+        this.tenXe = tenXe;
+    }
 
-	public void setLoaiXe(String loaiXe) {
-		this.loaiXe = loaiXe;
-	}
+    public String getHangXe() {
+        return hangXe;
+    }
 
-	public String getHangXe() {
-		return hangXe;
-	}
+    public void setHangXe(String hangXe) {
+        this.hangXe = hangXe;
+    }
 
-	public void setHangXe(String hangXe) {
-		this.hangXe = hangXe;
-	}
+    public String getMauXe() {
+        return mauXe;
+    }
 
-	public String getBienSoXe() {
-		return bienSoXe;
-	}
+    public void setMauXe(String mauXe) {
+        this.mauXe = mauXe;
+    }
 
-	public void setBienSoXe(String bienSoXe) {
-		this.bienSoXe = bienSoXe;
-	}
+    public Double getGiaThue() {
+        return giaThue;
+    }
 
-	public Integer getNamSanXuat() {
-		return namSanXuat;
-	}
+    public void setGiaThue(Double giaThue) {
+        this.giaThue = giaThue;
+    }
 
-	public void setNamSanXuat(Integer namSanXuat) {
-		this.namSanXuat = namSanXuat;
-	}
+    public Boolean getTrangThai() {
+        return trangThai;
+    }
 
-	public Double getGiaThue() {
-		return giaThue;
-	}
+    public void setTrangThai(Boolean trangThai) {
+        this.trangThai = trangThai;
+    }
 
-	public void setGiaThue(Double giaThue) {
-		this.giaThue = giaThue;
-	}
+    public List<DanhGiaXe> getDanhGiaXes() {
+        return danhGiaXes;
+    }
 
-	public String getTrangThaiXe() {
-		return trangThaiXe;
-	}
+    public void setDanhGiaXes(List<DanhGiaXe> danhGiaXes) {
+        this.danhGiaXes = danhGiaXes;
+    }
 
-	public void setTrangThaiXe(String trangThaiXe) {
-		this.trangThaiXe = trangThaiXe;
-	}
+    public List<DonThueXe> getDonThueXes() {
+        return donThueXes;
+    }
 
-	public Integer getSoKmDaDi() {
-		return soKmDaDi;
-	}
-
-	public void setSoKmDaDi(Integer soKmDaDi) {
-		this.soKmDaDi = soKmDaDi;
-	}
-
-	public Integer getSoGhe() {
-		return soGhe;
-	}
-
-	public void setSoGhe(Integer soGhe) {
-		this.soGhe = soGhe;
-	}
-	
-    
+    public void setDonThueXes(List<DonThueXe> donThueXes) {
+        this.donThueXes = donThueXes;
+    }
 }
-

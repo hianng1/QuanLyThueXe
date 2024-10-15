@@ -1,70 +1,80 @@
 package poly.edu.Model;
 
-import java.util.Date;
+import java.io.Serializable;
+import java.time.LocalDate;
 
-public class ThanhToan {
-	
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "ThanhToan")
+public class ThanhToan implements Serializable {
+    @Id
+    @Column(name = "ThanhToanID")
     private String thanhToanID;
+
+    @Column(name = "PhuongThucThanhToan")
     private String phuongThucThanhToan;
-    private Date ngayThanhToan;
+
+    @Column(name = "NgayThanhToan")
+    private LocalDate ngayThanhToan;
+
+    @Column(name = "SoTienThanhToan")
     private Double soTienThanhToan;
-    private String donThueXeID;
-    
-	public ThanhToan() {
-		
-	}
 
-	public ThanhToan(String thanhToanID, String phuongThucThanhToan, Date ngayThanhToan, Double soTienThanhToan,
-			String donThueXeID) {
-		this.thanhToanID = thanhToanID;
-		this.phuongThucThanhToan = phuongThucThanhToan;
-		this.ngayThanhToan = ngayThanhToan;
-		this.soTienThanhToan = soTienThanhToan;
-		this.donThueXeID = donThueXeID;
-	}
+    @ManyToOne
+    @JoinColumn(name = "DonThueXeID")
+    private DonThueXe donThueXe;
 
-	public String getThanhToanID() {
-		return thanhToanID;
-	}
+    // Constructor không tham số
+    public ThanhToan() {}
 
-	public void setThanhToanID(String thanhToanID) {
-		this.thanhToanID = thanhToanID;
-	}
+    // Constructor với tham số
+    public ThanhToan(String thanhToanID, String phuongThucThanhToan, LocalDate ngayThanhToan, Double soTienThanhToan, DonThueXe donThueXe) {
+        this.thanhToanID = thanhToanID;
+        this.phuongThucThanhToan = phuongThucThanhToan;
+        this.ngayThanhToan = ngayThanhToan;
+        this.soTienThanhToan = soTienThanhToan;
+        this.donThueXe = donThueXe;
+    }
 
-	public String getPhuongThucThanhToan() {
-		return phuongThucThanhToan;
-	}
+    // Getters và Setters
+    public String getThanhToanID() {
+        return thanhToanID;
+    }
 
-	public void setPhuongThucThanhToan(String phuongThucThanhToan) {
-		this.phuongThucThanhToan = phuongThucThanhToan;
-	}
+    public void setThanhToanID(String thanhToanID) {
+        this.thanhToanID = thanhToanID;
+    }
 
-	public Date getNgayThanhToan() {
-		return ngayThanhToan;
-	}
+    public String getPhuongThucThanhToan() {
+        return phuongThucThanhToan;
+    }
 
-	public void setNgayThanhToan(Date ngayThanhToan) {
-		this.ngayThanhToan = ngayThanhToan;
-	}
+    public void setPhuongThucThanhToan(String phuongThucThanhToan) {
+        this.phuongThucThanhToan = phuongThucThanhToan;
+    }
 
-	public Double getSoTienThanhToan() {
-		return soTienThanhToan;
-	}
+    public LocalDate getNgayThanhToan() {
+        return ngayThanhToan;
+    }
 
-	public void setSoTienThanhToan(Double soTienThanhToan) {
-		this.soTienThanhToan = soTienThanhToan;
-	}
+    public void setNgayThanhToan(LocalDate ngayThanhToan) {
+        this.ngayThanhToan = ngayThanhToan;
+    }
 
-	public String getDonThueXeID() {
-		return donThueXeID;
-	}
+    public Double getSoTienThanhToan() {
+        return soTienThanhToan;
+    }
 
-	public void setDonThueXeID(String donThueXeID) {
-		this.donThueXeID = donThueXeID;
-	}
+    public void setSoTienThanhToan(Double soTienThanhToan) {
+        this.soTienThanhToan = soTienThanhToan;
+    }
 
-	
-	
-    
+    public DonThueXe getDonThueXe() {
+        return donThueXe;
+    }
+
+    public void setDonThueXe(DonThueXe donThueXe) {
+        this.donThueXe = donThueXe;
+    }
 }
-

@@ -2,75 +2,95 @@ package poly.edu.Model;
 
 import java.util.Date;
 
-public class DanhGiaXe {
-	
-	private String danhGiaID;
-	private String noiDungDanhGia;
-	private Integer xepHang;
-	private Date ngayDanhGia;
-	private String khachHangID;
-	private String xeID;
-	
-	public DanhGiaXe(String danhGiaID, String noiDungDanhGia, Integer xepHang, Date ngayDanhGia, String khachHangID,
-			String xeID) {
-		this.danhGiaID = danhGiaID;
-		this.noiDungDanhGia = noiDungDanhGia;
-		this.xepHang = xepHang;
-		this.ngayDanhGia = ngayDanhGia;
-		this.khachHangID = khachHangID;
-		this.xeID = xeID;
-	}
 
-	public DanhGiaXe() {
-		
-	}
+import java.io.Serializable;
+import java.time.LocalDate;
 
-	public String getDanhGiaID() {
-		return danhGiaID;
-	}
+import jakarta.persistence.*;
 
-	public void setDanhGiaID(String danhGiaID) {
-		this.danhGiaID = danhGiaID;
-	}
+@Entity
+@Table(name = "DanhGiaXe")
+public class DanhGiaXe implements Serializable {
+    @Id
+    @Column(name = "DanhGiaID")
+    private String danhGiaID;
 
-	public String getNoiDungDanhGia() {
-		return noiDungDanhGia;
-	}
+    @Column(name = "NoiDungDanhGia", columnDefinition = "TEXT")
+    private String noiDungDanhGia;
 
-	public void setNoiDungDanhGia(String noiDungDanhGia) {
-		this.noiDungDanhGia = noiDungDanhGia;
-	}
+    @Column(name = "XepHang")
+    private Integer xepHang;
 
-	public Integer getXepHang() {
-		return xepHang;
-	}
+    @Column(name = "NgayDanhGia")
+    private LocalDate ngayDanhGia;
 
-	public void setXepHang(Integer xepHang) {
-		this.xepHang = xepHang;
-	}
+    @ManyToOne
+    @JoinColumn(name = "KhachHangID")
+    private KhachHang khachHang;
 
-	public Date getNgayDanhGia() {
-		return ngayDanhGia;
-	}
+    @ManyToOne
+    @JoinColumn(name = "XeID")
+    private Xe xe;
 
-	public void setNgayDanhGia(Date ngayDanhGia) {
-		this.ngayDanhGia = ngayDanhGia;
-	}
+    // Constructor không tham số
+    public DanhGiaXe() {}
 
-	public String getKhachHangID() {
-		return khachHangID;
-	}
+    // Constructor với tham số
+    public DanhGiaXe(String danhGiaID, String noiDungDanhGia, Integer xepHang, LocalDate ngayDanhGia, KhachHang khachHang, Xe xe) {
+        this.danhGiaID = danhGiaID;
+        this.noiDungDanhGia = noiDungDanhGia;
+        this.xepHang = xepHang;
+        this.ngayDanhGia = ngayDanhGia;
+        this.khachHang = khachHang;
+        this.xe = xe;
+    }
 
-	public void setKhachHangID(String khachHangID) {
-		this.khachHangID = khachHangID;
-	}
+    // Getters và Setters
+    public String getDanhGiaID() {
+        return danhGiaID;
+    }
 
-	public String getXeID() {
-		return xeID;
-	}
+    public void setDanhGiaID(String danhGiaID) {
+        this.danhGiaID = danhGiaID;
+    }
 
-	public void setXeID(String xeID) {
-		this.xeID = xeID;
-	}
-	
+    public String getNoiDungDanhGia() {
+        return noiDungDanhGia;
+    }
+
+    public void setNoiDungDanhGia(String noiDungDanhGia) {
+        this.noiDungDanhGia = noiDungDanhGia;
+    }
+
+    public Integer getXepHang() {
+        return xepHang;
+    }
+
+    public void setXepHang(Integer xepHang) {
+        this.xepHang = xepHang;
+    }
+
+    public LocalDate getNgayDanhGia() {
+        return ngayDanhGia;
+    }
+
+    public void setNgayDanhGia(LocalDate ngayDanhGia) {
+        this.ngayDanhGia = ngayDanhGia;
+    }
+
+    public KhachHang getKhachHang() {
+        return khachHang;
+    }
+
+    public void setKhachHang(KhachHang khachHang) {
+        this.khachHang = khachHang;
+    }
+
+    public Xe getXe() {
+        return xe;
+    }
+
+    public void setXe(Xe xe) {
+        this.xe = xe;
+    }
 }

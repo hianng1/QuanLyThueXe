@@ -1,105 +1,138 @@
 package poly.edu.Model;
 
-import java.util.Date;
+import java.io.Serializable;
+import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.*;
 
-public class KhachHang {
-	
+@Entity
+@Table(name = "KhachHang")
+public class KhachHang implements Serializable {
+    @Id
+    @Column(name = "KhachHangID")
     private String khachHangID;
+
+    @Column(name = "HoTen")
     private String hoTen;
+
+    @Column(name = "Email")
     private String email;
+
+    @Column(name = "SoDienThoai")
     private String soDienThoai;
+
+    @Column(name = "DiaChi")
     private String diaChi;
+
+    @Column(name = "TenDangNhap")
     private String tenDangNhap;
+
+    @Column(name = "MatKhau")
     private String matKhau;
-    private Date ngayDangKy;
-    
-	public KhachHang() {
-		
-	}
-	@ManyToOne
-	@JoinColumn(name = "user_id", referencedColumnName = "id")
-	private User user;
 
+    @Column(name = "NgayDangKy")
+    private LocalDate ngayDangKy;
 
-	public KhachHang(String khachHangID, String hoTen, String email, String soDienThoai, String diaChi,
-			String tenDangNhap, String matKhau, Date ngayDangKy) {
-		this.khachHangID = khachHangID;
-		this.hoTen = hoTen;
-		this.email = email;
-		this.soDienThoai = soDienThoai;
-		this.diaChi = diaChi;
-		this.tenDangNhap = tenDangNhap;
-		this.matKhau = matKhau;
-		this.ngayDangKy = ngayDangKy;
-	}
+    @OneToMany(mappedBy = "khachHang")
+    private List<DonThueXe> donThueXes;
 
-	public String getKhachHangID() {
-		return khachHangID;
-	}
+    @OneToMany(mappedBy = "khachHang")
+    private List<DanhGiaXe> danhGiaXes;
 
-	public void setKhachHangID(String khachHangID) {
-		this.khachHangID = khachHangID;
-	}
+    // Constructor không tham số
+    public KhachHang() {}
 
-	public String getHoTen() {
-		return hoTen;
-	}
+    // Constructor với tham số
+    public KhachHang(String khachHangID, String hoTen, String email, String soDienThoai, String diaChi, String tenDangNhap, String matKhau, LocalDate ngayDangKy) {
+        this.khachHangID = khachHangID;
+        this.hoTen = hoTen;
+        this.email = email;
+        this.soDienThoai = soDienThoai;
+        this.diaChi = diaChi;
+        this.tenDangNhap = tenDangNhap;
+        this.matKhau = matKhau;
+        this.ngayDangKy = ngayDangKy;
+    }
 
-	public void setHoTen(String hoTen) {
-		this.hoTen = hoTen;
-	}
+    // Getters và Setters
+    public String getKhachHangID() {
+        return khachHangID;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setKhachHangID(String khachHangID) {
+        this.khachHangID = khachHangID;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getHoTen() {
+        return hoTen;
+    }
 
-	public String getSoDienThoai() {
-		return soDienThoai;
-	}
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
+    }
 
-	public void setSoDienThoai(String soDienThoai) {
-		this.soDienThoai = soDienThoai;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public String getDiaChi() {
-		return diaChi;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public void setDiaChi(String diaChi) {
-		this.diaChi = diaChi;
-	}
+    public String getSoDienThoai() {
+        return soDienThoai;
+    }
 
-	public String getTenDangNhap() {
-		return tenDangNhap;
-	}
+    public void setSoDienThoai(String soDienThoai) {
+        this.soDienThoai = soDienThoai;
+    }
 
-	public void setTenDangNhap(String tenDangNhap) {
-		this.tenDangNhap = tenDangNhap;
-	}
+    public String getDiaChi() {
+        return diaChi;
+    }
 
-	public String getMatKhau() {
-		return matKhau;
-	}
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
+    }
 
-	public void setMatKhau(String matKhau) {
-		this.matKhau = matKhau;
-	}
+    public String getTenDangNhap() {
+        return tenDangNhap;
+    }
 
-	public Date getNgayDangKy() {
-		return ngayDangKy;
-	}
+    public void setTenDangNhap(String tenDangNhap) {
+        this.tenDangNhap = tenDangNhap;
+    }
 
-	public void setNgayDangKy(Date ngayDangKy) {
-		this.ngayDangKy = ngayDangKy;
-	}
-	
-	
-    
+    public String getMatKhau() {
+        return matKhau;
+    }
+
+    public void setMatKhau(String matKhau) {
+        this.matKhau = matKhau;
+    }
+
+    public LocalDate getNgayDangKy() {
+        return ngayDangKy;
+    }
+
+    public void setNgayDangKy(LocalDate ngayDangKy) {
+        this.ngayDangKy = ngayDangKy;
+    }
+
+    public List<DonThueXe> getDonThueXes() {
+        return donThueXes;
+    }
+
+    public void setDonThueXes(List<DonThueXe> donThueXes) {
+        this.donThueXes = donThueXes;
+    }
+
+    public List<DanhGiaXe> getDanhGiaXes() {
+        return danhGiaXes;
+    }
+
+    public void setDanhGiaXes(List<DanhGiaXe> danhGiaXes) {
+        this.danhGiaXes = danhGiaXes;
+    }
 }
-

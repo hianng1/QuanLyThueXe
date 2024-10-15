@@ -1,88 +1,126 @@
 package poly.edu.Model;
 
+import java.io.Serializable;
+
 import java.util.Date;
+import java.util.UUID;
 
-public class DonThueXe {
-	
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
+import lombok.Data;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+
+import jakarta.persistence.*;
+@Entity
+@Table(name = "DonThueXe")
+public class DonThueXe implements Serializable {
+    @Id
+    @GeneratedValue
+    @Column(name = "DonThueXeID")
     private String donThueXeID;
-    private Date ngayThue;
-    private Date ngayTraXe;
+
+    @PrePersist
+    protected void onCreate() {
+        if (this.donThueXeID == null) {
+            this.donThueXeID = UUID.randomUUID().toString();
+        }
+    }
+    @Column(name = "NgayThue")
+    private LocalDate ngayThue;
+
+    @Column(name = "NgayTraXe")
+    private LocalDate ngayTraXe;
+
+    @Column(name = "TongTien")
     private Double tongTien;
+
+    @Column(name = "TrangThaiDonHang")
     private String trangThaiDonHang;
-    private String khachHangID;
-    private String xeID;
-    
-	public DonThueXe() {
-		
-	}
 
-	public DonThueXe(String donThueXeID, Date ngayThue, Date ngayTraXe, Double tongTien, String trangThaiDonHang,
-			String khachHangID, String xeID) {
-		this.donThueXeID = donThueXeID;
-		this.ngayThue = ngayThue;
-		this.ngayTraXe = ngayTraXe;
-		this.tongTien = tongTien;
-		this.trangThaiDonHang = trangThaiDonHang;
-		this.khachHangID = khachHangID;
-		this.xeID = xeID;
-	}
+    @ManyToOne
+    @JoinColumn(name = "KhachHangID")
+    private KhachHang khachHang;
 
-	public String getDonThueXeID() {
-		return donThueXeID;
-	}
+    @ManyToOne
+    @JoinColumn(name = "XeID")
+    private Xe xe;
 
-	public void setDonThueXeID(String donThueXeID) {
-		this.donThueXeID = donThueXeID;
-	}
+    // Constructor không tham số
+    public DonThueXe() {}
 
-	public Date getNgayThue() {
-		return ngayThue;
-	}
+    // Constructor với tham số
+    public DonThueXe(String donThueXeID, LocalDate ngayThue, LocalDate ngayTraXe, Double tongTien, String trangThaiDonHang, KhachHang khachHang, Xe xe) {
+        this.donThueXeID = donThueXeID;
+        this.ngayThue = ngayThue;
+        this.ngayTraXe = ngayTraXe;
+        this.tongTien = tongTien;
+        this.trangThaiDonHang = trangThaiDonHang;
+        this.khachHang = khachHang;
+        this.xe = xe;
+    }
 
-	public void setNgayThue(Date ngayThue) {
-		this.ngayThue = ngayThue;
-	}
+    // Getters và Setters
+    public String getDonThueXeID() {
+        return donThueXeID;
+    }
 
-	public Date getNgayTraXe() {
-		return ngayTraXe;
-	}
+    public void setDonThueXeID(String donThueXeID) {
+        this.donThueXeID = donThueXeID;
+    }
 
-	public void setNgayTraXe(Date ngayTraXe) {
-		this.ngayTraXe = ngayTraXe;
-	}
+    public LocalDate getNgayThue() {
+        return ngayThue;
+    }
 
-	public Double getTongTien() {
-		return tongTien;
-	}
+    public void setNgayThue(LocalDate ngayThue) {
+        this.ngayThue = ngayThue;
+    }
 
-	public void setTongTien(Double tongTien) {
-		this.tongTien = tongTien;
-	}
+    public LocalDate getNgayTraXe() {
+        return ngayTraXe;
+    }
 
-	public String getTrangThaiDonHang() {
-		return trangThaiDonHang;
-	}
+    public void setNgayTraXe(LocalDate ngayTraXe) {
+        this.ngayTraXe = ngayTraXe;
+    }
 
-	public void setTrangThaiDonHang(String trangThaiDonHang) {
-		this.trangThaiDonHang = trangThaiDonHang;
-	}
+    public Double getTongTien() {
+        return tongTien;
+    }
 
-	public String getKhachHangID() {
-		return khachHangID;
-	}
+    public void setTongTien(Double tongTien) {
+        this.tongTien = tongTien;
+    }
 
-	public void setKhachHangID(String khachHangID) {
-		this.khachHangID = khachHangID;
-	}
+    public String getTrangThaiDonHang() {
+        return trangThaiDonHang;
+    }
 
-	public String getXeID() {
-		return xeID;
-	}
+    public void setTrangThaiDonHang(String trangThaiDonHang) {
+        this.trangThaiDonHang = trangThaiDonHang;
+    }
 
-	public void setXeID(String xeID) {
-		this.xeID = xeID;
-	}
-	
-	
-    
+    public KhachHang getKhachHang() {
+        return khachHang;
+    }
+
+    public void setKhachHang(KhachHang khachHang) {
+        this.khachHang = khachHang;
+    }
+
+    public Xe getXe() {
+        return xe;
+    }
+
+    public void setXe(Xe xe) {
+        this.xe = xe;
+    }
 }
