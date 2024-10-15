@@ -7,12 +7,24 @@ INSERT INTO nguoi_cho_thue(nguoi_cho_thueid, ho_ten, email, so_dien_thoai, dia_c
 ('NCT004', 'Pham Thi D', 'd.pham@example.com', '0904567890', '101 Hai Ba Trung, Can Tho', 'phamthid', 'password321', '2023-04-05', 3.9),
 ('NCT005', 'Hoang Le E', 'e.hoang@example.com', '0905678901', '202 Le Duan, Hue', 'hoanglene', 'password654', '2023-05-12', 4.7);
 
-INSERT INTO Xe (XeID, ten_xe, hang_xe, mau_xe, gia_thue, trang_thai, nguoi_cho_thueid) VALUES
-('XE001', 'Toyota Camry', 'Toyota', 'Đen', 1000000, 1, 'NCT001'),
-('XE002', 'Honda Civic', 'Honda', 'Trắng', 850000, 0, 'NCT002'),
-('XE003', 'Mazda 3', 'Mazda', 'Xanh', 900000, 1, 'NCT003'),
-('XE004', 'Ford Ranger', 'Ford', 'Đỏ', 1200000, 1, 'NCT004'),
-('XE005', 'Hyundai Santa Fe', 'Hyundai', 'Bạc', 950000, 0, 'NCT005');
+INSERT INTO Xe (XeID, ten_xe, hang_xe, mau_xe, gia_thue, trang_thai, so_ghe, nhien_lieu, tieu_hao_nhien_lieu, dia_diem_giao_xe, ngay_nhan_xe, ngay_tra_xe, anh_dai_dien) VALUES
+('XE001', 'Toyota Corolla', 'Toyota', 'Đen', 500000, 1, 5, 'Xăng', 6.5, 'Hà Nội', '2024-10-01 08:00:00', '2024-10-10 08:00:00', 'Toyotacorlla1.jpg'),
+('XE002', 'Honda Civic', 'Honda', 'Trắng', 600000, 1, 5, 'Xăng', 7.0, 'Hà Nội', '2024-10-05 09:00:00', '2024-10-12 09:00:00', 'Toyotacorlla2.jpg'),
+('XE003', 'Mazda 3', 'Mazda', 'Đỏ', 550000, 1, 5, 'Xăng', 7.5, 'Đà Nẵng', '2024-10-07 10:00:00', '2024-10-15 10:00:00', 'Toyotacorlla1.jpg'),
+('XE004', 'Kia Morning', 'Kia', 'Vàng', 400000, 1, 5, 'Xăng', 5.5, 'TP Hồ Chí Minh', '2024-10-02 11:00:00', '2024-10-11 11:00:00', 'Toyotacorlla2.jpg'),
+('XE005', 'Hyundai Accent', 'Hyundai', 'Xanh', 450000, 1, 5, 'Xăng', 6.0, 'Hà Nội', '2024-10-03 12:00:00', '2024-10-10 12:00:00', 'Toyotarush1.jpg'),
+('XE006', 'Toyota Fortuner', 'Toyota', 'Đen', 1200000, 1, 7, 'Diesel', 8.0, 'Hà Nội', '2024-10-04 13:00:00', '2024-10-14 13:00:00', 'Toyotarush2.jpg'),
+('XE007', 'Ford Ranger', 'Ford', 'Bạc', 1000000, 1, 5, 'Diesel', 9.0, 'Đà Nẵng', '2024-10-05 14:00:00', '2024-10-15 14:00:00', 'Toyotarush3.jpg'),
+('XE008', 'Nissan Sunny', 'Nissan', 'Trắng', 480000, 1, 5, 'Xăng', 7.0, 'TP Hồ Chí Minh', '2024-10-06 15:00:00', '2024-10-13 15:00:00', 'Toyotarush4.jpg');
+
+INSERT INTO anh_xe (anh_xeid, url_anh, XeID) 
+VALUES
+('AX001', 'https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/hyundai_custin_luxury_2024/p/g/2024/09/07/14/3lPQPTmUQsbqQU-nu7T6wA.jpg', 'XE001'),
+('AX002', 'https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/kia_morning_2017/p/g/2023/08/01/18/qgU2zQ7OVnpe3hagi15SQw.jpg', 'XE002'),
+('AX003', 'https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/vinfast_vf5_2023/p/g/2023/08/07/23/Qh_M-OYpOcvC93rJHgeY-A.jpg', 'XE003'),
+('AX004', 'https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/_hyundai_kona_2019/p/g/2023/10/09/12/Krz-i_VhIZdY9bxllKetHw.jpg', 'XE004'),
+('AX005', 'https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/kia_morning_2022/p/g/2024/07/26/07/zv-BDwrJHJVoorp8Tb-TAg.jpg', 'XE005');
+
 
 INSERT INTO users (id, username, password, role, activated) VALUES
 ('U001', 'nguyenvana', 'password123', 'CUSTOMER', 1),

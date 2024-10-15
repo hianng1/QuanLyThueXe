@@ -51,19 +51,21 @@
 					<div class="col-md-4">
 						<div class="card"
 							onclick="window.location.href='/car?xeID=${xe.xeID}'">
-							<img
-								src="https://n1-pstg.mioto.vn/cho_thue_xe_o_to_tu_lai_thue_xe_du_lich_hochiminh/toyota_innova_2016/p/g/2024/06/26/11/Q7SfQiVa25ZlKCbJbH91TA.jpg"
-								class="card-img-top" alt="${xe.tenXe}">
+							<!-- Hiển thị ảnh từ URL trong cơ sở dữ liệu -->
+							<img src="/photo/${xe.anhDaiDien}" class="card-img-top"
+								alt="${xe.tenXe}">
+
 							<div class="card-body">
 								<span class="badge bg-warning text-dark">Số sàn</span>
 								<h5 class="card-title mt-2">${xe.tenXe}</h5>
 								<p>
-									<i class="fa fa-map-marker"></i> Quận Bình Thạnh, TP. Hồ Chí
-									Minh
+									<i class="fa fa-map-marker"></i> ${xe.diaDiemGiaoXe}
 								</p>
 								<p class="card-text">
-									<span class="text-warning"><i class="fa fa-star"></i>
-										5.0</span> <span><i class="fa fa-suitcase"></i> 1 chuyến</span>
+									<span class="text-warning"> <i class="fa fa-star"></i>
+										5.0
+									</span> <span><i class="fa fa-suitcase"></i>
+										${xe.tieuHaoNhienLieu}</span>
 								</p>
 								<p>
 									<span class="text-muted"><del>858K</del></span> <strong
@@ -73,6 +75,8 @@
 						</div>
 					</div>
 				</c:forEach>
+
+
 
 
 			</div>

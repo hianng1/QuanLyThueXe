@@ -8,6 +8,6 @@ public class ProductController {
 	@GetMapping("/car")
     public String getProductDetail() {
 
-        return "/customer/product_detail"; //
+        return "/product_detail"; //
     }
 }
