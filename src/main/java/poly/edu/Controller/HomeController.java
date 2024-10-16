@@ -26,15 +26,6 @@ public class HomeController {
 	@RequestMapping("/trangchu")
 	public String home(Model model) {
 	    List<Xe> items = xeDAO.findAll();
-//
-//	    // Lấy danh sách ảnh của mỗi xe
-//	    for (Xe xe : items) {
-//	        List<AnhXe> anhXes = anhXeDAO.findByXe(xe);
-//	        if (!anhXes.isEmpty()) {
-//	            // Lấy ảnh đầu tiên của xe để hiển thị trên card
-//	            xe.setAnhDaiDien(anhXes.get(0).getUrlAnh()); // Gán URL ảnh đầu tiên
-//	        }
-//	    }
 	    model.addAttribute("items", items);
 	    return "index";
 	}
@@ -45,11 +36,11 @@ public class HomeController {
 	public String owner(Model model) {
 		return "owner/register";
 	}
-	
-	@RequestMapping("/car")
-	public String car(@RequestParam("xeID") String xeID, Model model) {
-	    Xe xe = xeDAO.findById(xeID).orElse(null); // Tìm xe theo ID
-	    model.addAttribute("xe", xe);
-	    return "/user/product_detail";
-	}
 }
+//	@RequestMapping("/car")
+//	public String car(@RequestParam("xeID") String xeID, Model model) {
+//	    Xe xe = xeDAO.findById(xeID).orElse(null); // Tìm xe theo ID
+//	    model.addAttribute("xe", xe);
+//	    return "/user/product_detail";
+//	}
+//}

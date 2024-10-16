@@ -38,30 +38,8 @@
 				<div class="row no-gutters">
 					<!-- Main Image -->
 					<div class="col-lg-8 pe-0">
-						<img src="../photo/anh 0.jpg" class="img-fluid rounded main-image"
+						<img src="../photo/${xe.anhDaiDien }" class="img-fluid rounded main-image"
 							alt="Main Image">
-					</div>
-
-					<!-- Side Images -->
-					<div class="col-lg-4 d-flex flex-column ps-0">
-						<div class="row no-gutters flex-grow-1">
-							<div class="col-6 pb-2 ps-0">
-								<img src="../photo/1.jpg" class="img-fluid rounded side-image"
-									alt="Top Right Image">
-							</div>
-						</div>
-						<div class="row no-gutters flex-grow-1">
-							<div class="col-6 pb-2 ps-0">
-								<img src="../photo/2.jpg" class="img-fluid rounded side-image"
-									alt="Bottom Left Image">
-							</div>
-						</div>
-						<div class="row no-gutters flex-grow-1">
-							<div class="col-6 pb-2 ps-0">
-								<img src="../photo/3.jpg" class="img-fluid rounded side-image"
-									alt="Bottom Right Image">
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -74,16 +52,11 @@
 				<div class="row">
 					<!-- Thêm div.row để tạo một hàng mới -->
 					<div class="col-lg-8 ps-3">
-						<h2>KIA MORNING 2011</h2>
+						<h2>${xe.tenXe }</h2>
 						<p>
-							<i class="bi bi-star-fill" style="color: yellow;"></i> 5.0 • <i
-								class="bi bi-suitcase" style="color: green"></i> 8 chuyến • Quận
-							Bình Thạnh • TP. Hồ Chí Minh
+							<i class="bi bi-star-fill" style="color: yellow;"></i> 5.0 • ${xe.diaDiemGiaoXe}
 						</p>
 						<div class="d-flex gap-2">
-							<button type="button" class="btn"
-								style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; background-color: rgba(0, 123, 255, 0.5); color: black; font-weight: 300; outline: none; border: none;">Số
-								tự động</button>
 							<button type="button" class="btn"
 								style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; background-color: rgba(255, 165, 0, 0.5); color: black; font-weight: 300; outline: none; border: none;">
 								Đặt xe nhanh</button>
@@ -100,7 +73,7 @@
 										style="font-size: 24px; margin-right: 8px; line-height: 1;"></i>
 									<div>
 										<p style="margin: 0;">Số ghế</p>
-										<p style="margin: 0; font-weight: bold;">4 chỗ</p>
+										<p style="margin: 0; font-weight: bold;">${xe.soGhe}</p>
 									</div>
 								</div>
 							</div>
@@ -130,20 +103,10 @@
 										style="font-size: 24px; margin-right: 8px; line-height: 1;"></i>
 									<div>
 										<p style="margin: 0;">NL tiêu hao</p>
-										<p style="margin: 0; font-weight: bold;">6 lít/100km</p>
+										<p style="margin: 0; font-weight: bold;">${xe.tieuHaoNhienLieu} lít/100km</p>
 									</div>
 								</div>
 							</div>
-						</div>
-						<hr>
-						<h5 style="margin-top: 20px; margin-bottom: 20px">Mô tả</h5>
-						<div id="car-description">
-							<p>KIA MORNING (AT) số tự động đăng ký tháng 06/2018. Xe gia
-								đình mới đẹp, nội thất nguyên bản, sạch sẽ, bảo dưỡng thường
-								xuyên, rửa xe miễn phí cho khách. Xe rộng rãi, an toàn, tiện
-								nghi, phù hợp cho gia đình du lịch Xe trang bị hệ thống cảm biến
-								lùi, gạt mưa tự động, đèn pha tự động, camera hành trình, hệ
-								thống giải trí AV cùng nhiều tiện nghi khác…</p>
 						</div>
 						<hr>
 						<h5 style="margin-top: 20px; margin-bottom: 20px">Các tiện
@@ -393,12 +356,12 @@ Trân trọng cảm ơn, chúc quý khách hàng có những chuyến đi tuyệ
 								<p id="return-display" class="text-muted mb-1"
 									style="font-size: 0.75rem;">Ngày giờ trả xe: Chưa chọn</p>
 							</div>
-<!-- 							<div class="mt-3 p-2 bg-light rounded"> -->
-<!-- 								<p class="text-muted mb-1" style="font-size: 0.75rem;">Địa -->
-<!-- 									điểm giao xe</p> -->
-<!-- 								<h6 class="fw-bold" style="font-size: 0.875rem;">Quận Bình -->
-<!-- 									Thạnh, TP Hồ Chí Minh</h6> -->
-<!-- 							</div> -->
+							<!-- 							<div class="mt-3 p-2 bg-light rounded"> -->
+							<!-- 								<p class="text-muted mb-1" style="font-size: 0.75rem;">Địa -->
+							<!-- 									điểm giao xe</p> -->
+							<!-- 								<h6 class="fw-bold" style="font-size: 0.875rem;">Quận Bình -->
+							<!-- 									Thạnh, TP Hồ Chí Minh</h6> -->
+							<!-- 							</div> -->
 							<hr>
 							<div class="mt-2">
 								<div class="d-flex justify-content-between">
@@ -454,32 +417,43 @@ Trân trọng cảm ơn, chúc quý khách hàng có những chuyến đi tuyệ
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
-<script>
-$(document).ready(function() {
-    $('#pickup-date-picker, #return-date-picker').datepicker({
-        format: 'dd/mm/yyyy',
-        autoclose: true,
-        todayHighlight: true
-    });
+	<script>
+		$(document)
+				.ready(
+						function() {
+							$('#pickup-date-picker, #return-date-picker')
+									.datepicker({
+										format : 'dd/mm/yyyy',
+										autoclose : true,
+										todayHighlight : true
+									});
 
-    function updateDateTimeDisplay() {
-        var pickupDate = $('#pickup-date').val();
-        var pickupTime = $('#pickup-time').val();
-        var returnDate = $('#return-date').val();
-        var returnTime = $('#return-time').val();
+							function updateDateTimeDisplay() {
+								var pickupDate = $('#pickup-date').val();
+								var pickupTime = $('#pickup-time').val();
+								var returnDate = $('#return-date').val();
+								var returnTime = $('#return-time').val();
 
-        var pickupDisplay = pickupDate && pickupTime ? pickupDate + ' ' + pickupTime : 'Chưa chọn';
-        var returnDisplay = returnDate && returnTime ? returnDate + ' ' + returnTime : 'Chưa chọn';
+								var pickupDisplay = pickupDate && pickupTime ? pickupDate
+										+ ' ' + pickupTime
+										: 'Chưa chọn';
+								var returnDisplay = returnDate && returnTime ? returnDate
+										+ ' ' + returnTime
+										: 'Chưa chọn';
 
-        $('#pickup-display').text('Ngày giờ nhận xe: ' + pickupDisplay);
-        $('#return-display').text('Ngày giờ trả xe: ' + returnDisplay);
-    }
+								$('#pickup-display').text(
+										'Ngày giờ nhận xe: ' + pickupDisplay);
+								$('#return-display').text(
+										'Ngày giờ trả xe: ' + returnDisplay);
+							}
 
-    $('#pickup-date, #pickup-time, #return-date, #return-time').change(updateDateTimeDisplay);
+							$(
+									'#pickup-date, #pickup-time, #return-date, #return-time')
+									.change(updateDateTimeDisplay);
 
-    // Initial update
-    updateDateTimeDisplay();
-});
-</script>
+							// Initial update
+							updateDateTimeDisplay();
+						});
+	</script>
 </body>
 </html>

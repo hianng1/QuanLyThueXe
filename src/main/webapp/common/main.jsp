@@ -64,7 +64,7 @@
 								<p class="card-text">
 									<span class="text-warning"> <i class="fa fa-star"></i>
 										5.0
-									</span> <span><i class="fa fa-suitcase"></i>
+									</span> <span><i class="fa fa-gas-pump"></i>
 										${xe.tieuHaoNhienLieu}</span>
 								</p>
 								<p>
