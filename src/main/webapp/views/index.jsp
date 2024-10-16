@@ -102,6 +102,7 @@
 
 							<div class="card-body">
 								<span class="badge bg-warning text-dark">Giao xe tận nơi</span>
+								<span class="badge text-bg-danger">${xe.nhienLieu}</span>
 								<h5 class="card-title mt-2">${xe.tenXe}</h5>
 								<p>
 									<i class="fa fa-map-marker"></i> ${xe.diaDiemGiaoXe}

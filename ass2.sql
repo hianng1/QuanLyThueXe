@@ -8,14 +8,14 @@ INSERT INTO nguoi_cho_thue(nguoi_cho_thueid, ho_ten, email, so_dien_thoai, dia_c
 ('NCT005', 'Hoang Le E', 'e.hoang@example.com', '0905678901', '202 Le Duan, Hue', 'hoanglene', 'password654', '2023-05-12', 4.7);
 
 INSERT INTO Xe (XeID, ten_xe, hang_xe, mau_xe, gia_thue, trang_thai, so_ghe, nhien_lieu, tieu_hao_nhien_lieu, dia_diem_giao_xe, ngay_nhan_xe, ngay_tra_xe, anh_dai_dien) VALUES
-('XE001', 'Toyota Corolla', 'Toyota', 'Đen', 500000, 1, 5, 'Xăng', 6.5, 'Hà Nội', '2024-10-01 08:00:00', '2024-10-10 08:00:00', 'Toyotacorlla1.jpg'),
-('XE002', 'Honda Civic', 'Honda', 'Trắng', 600000, 1, 5, 'Xăng', 7.0, 'Hà Nội', '2024-10-05 09:00:00', '2024-10-12 09:00:00', 'Toyotacorlla2.jpg'),
-('XE003', 'Mazda 3', 'Mazda', 'Đỏ', 550000, 1, 5, 'Xăng', 7.5, 'Đà Nẵng', '2024-10-07 10:00:00', '2024-10-15 10:00:00', 'Toyotacorlla1.jpg'),
-('XE004', 'Kia Morning', 'Kia', 'Vàng', 400000, 1, 5, 'Xăng', 5.5, 'TP Hồ Chí Minh', '2024-10-02 11:00:00', '2024-10-11 11:00:00', 'Toyotacorlla2.jpg'),
-('XE005', 'Hyundai Accent', 'Hyundai', 'Xanh', 450000, 1, 5, 'Xăng', 6.0, 'Hà Nội', '2024-10-03 12:00:00', '2024-10-10 12:00:00', 'Toyotarush1.jpg'),
-('XE006', 'Toyota Fortuner', 'Toyota', 'Đen', 1200000, 1, 7, 'Diesel', 8.0, 'Hà Nội', '2024-10-04 13:00:00', '2024-10-14 13:00:00', 'Toyotarush2.jpg'),
-('XE007', 'Ford Ranger', 'Ford', 'Bạc', 1000000, 1, 5, 'Diesel', 9.0, 'Đà Nẵng', '2024-10-05 14:00:00', '2024-10-15 14:00:00', 'Toyotarush3.jpg'),
-('XE008', 'Nissan Sunny', 'Nissan', 'Trắng', 480000, 1, 5, 'Xăng', 7.0, 'TP Hồ Chí Minh', '2024-10-06 15:00:00', '2024-10-13 15:00:00', 'Toyotarush4.jpg');
+('XE001', N'Toyota Corolla', N'Toyota', N'Đen', 500000, 1, 5, N'Xăng', 6.5, N'Hà Nội', '2024-10-01 08:00:00', '2024-10-10 08:00:00', N'Toyotacorlla1.jpg'),
+('XE002', N'Honda Civic', N'Honda', N'Trắng', 600000, 1, 5, N'Xăng', 7.0, N'Hà Nội', '2024-10-05 09:00:00', '2024-10-12 09:00:00', N'Toyotacorlla2.jpg'),
+('XE003', N'Mazda 3', N'Mazda', N'Đỏ', 550000, 1, 5, N'Xăng', 7.5, N'Đà Nẵng', '2024-10-07 10:00:00', '2024-10-15 10:00:00', N'Toyotacorlla1.jpg'),
+('XE004', N'Kia Morning', N'Kia', N'Vàng', 400000, 1, 5, N'Xăng', 5.5, N'TP Hồ Chí Minh', '2024-10-02 11:00:00', '2024-10-11 11:00:00', N'Toyotacorlla2.jpg'),
+('XE005', N'Hyundai Accent', N'Hyundai', N'Xanh', 450000, 1, 5, N'Xăng', 6.0, N'Hà Nội', '2024-10-03 12:00:00', '2024-10-10 12:00:00', N'Toyotarush1.jpg'),
+('XE006', N'Toyota Fortuner', N'Toyota', N'Đen', 1200000, 1, 7, N'Diesel', 8.0, N'Hà Nội', '2024-10-04 13:00:00', '2024-10-14 13:00:00', N'Toyotarush2.jpg'),
+('XE007', N'Ford Ranger', N'Ford', N'Bạc', 1000000, 1, 5, N'Diesel', 9.0, N'Đà Nẵng', '2024-10-05 14:00:00', '2024-10-15 14:00:00', N'Toyotarush3.jpg'),
+('XE008', N'Nissan Sunny', N'Nissan', N'Trắng', 480000, 1, 5, N'Xăng', 7.0, N'TP Hồ Chí Minh', '2024-10-06 15:00:00', '2024-10-13 15:00:00', N'Toyotarush4.jpg');
 
 INSERT INTO anh_xe (anh_xeid, url_anh, XeID) 
 VALUES
