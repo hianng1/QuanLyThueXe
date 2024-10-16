@@ -28,7 +28,7 @@ public class CustomerController {
 		return "/access-denied"; // TRANG CHỦ CHO NGƯỜI DÙNG KHÁC
 	}
 	
-	@RequestMapping("/myProfile")
+	@RequestMapping("/myProfile/profile")
 	public String profile(Model model) {
 		return "customer/profile";
 	}

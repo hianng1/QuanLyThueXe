@@ -55,7 +55,7 @@
                                                     </c:when>
                                                     <c:when test="${user.role == 'CUSTOMER'}">
 														<li><a class="dropdown-item" href="/myProfile">Profile</a></li>
-<!-- 														<li><a class="dropdown-item" href="/customerDashboard">Customer Dashboard</a></li>	
+														<li><a class="dropdown-item" href="/customerDashboard">Customer Dashboard</a></li>	
                                                     </c:when>
                                                     <c:when test="${user.role == 'ADMIN'}">
                                                         <li><a class="dropdown-item" href="/dashboard">Customer Dashboard</a></li>
@@ -70,7 +70,7 @@
                                             <a class="nav-link active fw-semibold" aria-current="page" href="dangkyxe">Trở thành chủ xe</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link active fw-semibold" aria-current="page" href="#">Đăng ký</a>
+                                            <a class="nav-link active fw-semibold" aria-current="page" href="/register">Đăng ký</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link active fw-semibold" aria-current="page" href="/login">Đăng nhập</a>
