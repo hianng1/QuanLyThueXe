@@ -13,23 +13,23 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class ProfileController {
 	
-	@RequestMapping("/profile")
-	public String profile(Model model) {
-		return "profile/profile";
-	}
-	
-	@RequestMapping("/profile/changePass")
-	public String changePass() {
-		return "profile/changePass";
-	}
-	@RequestMapping("/profile/bookingHistory")
-	public String BookingHistory() {
-		return "profile/bookingHistory";
-	}
-	@RequestMapping("/profile/promotion")
-	public String Promotion() {
-		return "profile/promotion";
-	}
+//	@RequestMapping("/myProfile")
+//	public String profile(Model model) {
+//		return "customer/profile";
+//	}
+//	
+//	@RequestMapping("/myProfile/changePass")
+//	public String changePass() {
+//		return "customer/changePass";
+//	}
+//	@RequestMapping("/myProfile/bookingHistory")
+//	public String BookingHistory() {
+//		return "customer/bookingHistory";
+//	}
+//	@RequestMapping("/myProfile/promotion")
+//	public String Promotion() {
+//		return "customer/promotion";
+//	}
 
 	
 }

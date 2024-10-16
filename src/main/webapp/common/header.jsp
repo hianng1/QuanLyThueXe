@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+	<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
@@ -54,13 +54,13 @@
                                                         <li><a class="dropdown-item" href="/owner/dashboard">Owner Dashboard</a></li>
                                                     </c:when>
                                                     <c:when test="${user.role == 'CUSTOMER'}">
-                                                        <li><a class="dropdown-item" href="/customerDashboard">Customer Dashboard</a></li>
+														<li><a class="dropdown-item" href="/myProfile">Profile</a></li>
+<!-- 														<li><a class="dropdown-item" href="/customerDashboard">Customer Dashboard</a></li>	
                                                     </c:when>
                                                     <c:when test="${user.role == 'ADMIN'}">
                                                         <li><a class="dropdown-item" href="/dashboard">Customer Dashboard</a></li>
                                                     </c:when>
                                                 </c:choose>
-                                                <li><a class="dropdown-item" href="/profile">Profile</a></li>
                                                 <li><a class="dropdown-item" href="/logout">Logout</a></li>
                                             </ul>
                                         </li>
