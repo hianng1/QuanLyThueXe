@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Index</title>
+<title>Mioto - Ứng dụng cho thuê xe</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -296,13 +296,13 @@ Trân trọng cảm ơn, chúc quý khách hàng có những chuyến đi tuyệ
 								chi tiết</h5>
 						</div>
 						<div class="rent-box card p-4 mb-3">
-							<div class="d-flex align-items-center mb-2">
+							<!--<div class="d-flex align-items-center mb-2">
 								<span class="price-original text-muted fs-5 me-2">505K</span> <span
 									class="price-discount bg-warning text-dark rounded p-1 fs-8"
 									style="font-size: 0.75rem;">-23%</span>
-							</div>
+							</div>-->
 							<h3 class="price-daily text-dark">
-								405K <span class="text-muted" style="font-size: 0.875rem;">/ngày</span>
+								${xe.giaThue} đồng<span class="text-muted" style="font-size: 0.875rem;">/ngày</span>
 							</h3>
 
 							<!-- Box cho Nhận xe và Trả xe -->
@@ -418,6 +418,7 @@ Trân trọng cảm ơn, chúc quý khách hàng có những chuyến đi tuyệ
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
 	<script>
+	
 		$(document)
 				.ready(
 						function() {
