@@ -29,11 +29,11 @@
             <!-- Sidebar Menu -->
             <div class="col-md-3 mt-5">
 <ul class="list-group">
-    <li class="list-group-item"><a href="/profile" style="text-decoration: none;">Xe của tôi</a></li>
-    <li class="list-group-item"><a href="/profile/bookingHistory" style="text-decoration: none;">Chuyến đi của tôi</a></li>
-    <li class="list-group-item"><a href="/profile/promotion" style="text-decoration: none;">Danh Sách khuyến mãi</a></li>
-    <li class="list-group-item"><a href="/profile/changePass" style="text-decoration: none;">Đổi mật khẩu</a></li>
-    <li class="list-group-item"><a href="#" style="text-decoration: none;">Đăng xuất</a></li>
+    <li class="list-group-item"><a href="/myProfile/profile" style="text-decoration: none;">Thông tin của tôi</a></li>
+    <li class="list-group-item"><a href="/myProfile/bookingHistory" style="text-decoration: none;">Chuyến đi của tôi</a></li>
+    <li class="list-group-item"><a href="/myProfile/promotion" style="text-decoration: none;">Danh Sách khuyến mãi</a></li>
+    <li class="list-group-item"><a href="/myProfile/changePass" style="text-decoration: none;">Đổi mật khẩu</a></li>
+    <li class="list-group-item"><a href="/logout" style="text-decoration: none;">Đăng xuất</a></li>
 </ul>
 
 </div>
@@ -55,7 +55,7 @@
             <form>
                 <div >
                     <label for="name" class="form-label">
-                        <i class="bi bi-hash"></i> Tên khách hàng:
+                        <i class="bi bi-hash"></i> Tên của tôi:
                     </label>
                    <div class="mb-3 d-flex align-items-center" > 
                     <input type="text" id="name" name="name" class="form-control me-3">
